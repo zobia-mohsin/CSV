@@ -30,7 +30,7 @@ for rec in csv_file:
 
     except ValueError:  # only print this if error with data
         # variable name in the string literal with the curly brackets
-        print(f'Missing data for {the_date}')
+        print(f'Missing data for {the_date}')  # f string, avoids commas
     else:
         highs.append(high)
         lows.append(low)
@@ -64,7 +64,7 @@ plt.show()
 
 # HOMEWORK for sitca and deathvalley, look at file and see how it is made up, specially look at index values
 # do automatic index value, get it based on files
-plt.subplot(2, 1, 1)
+plt.subplot(2, 1, 1)  # two rows, one column, top graph
 plt.plot(dates, highs, c='red')
 plt.title("Highs")
 

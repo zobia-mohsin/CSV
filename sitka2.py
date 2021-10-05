@@ -15,22 +15,15 @@ for index, column_header in enumerate(header_row):
 
 highs = []
 dates = []
-# testing the datetime strptime function
-mydate = datetime.strptime('2018-07-01', '%Y-%m-%d')
+# testing to convert date from string
+mydate = datetime.strptime('2018-07-01', '%Y-%m-%d')  # specify formart
 print(mydate)
 print(type(mydate))  # to convert test to date use datetime
 
 for rec in csv_file:
-    highs.append(int(rec[5])
-    the_date=datetime.strptime(rec[2], '%Y-%m-%d')
+    highs.append(int(rec[5]))
+    the_date = datetime.strptime(rec[2], '%Y-%m-%d')
     dates.append(the_date)
-# lows = []
-
-
-# for rec in csv_file:
-    # lows.append(int(rec[5]))
-
-# print(lows)
 
 for rec in csv_file:
     highs.append(int(rec[5]))
@@ -38,7 +31,7 @@ for rec in csv_file:
 print(highs)
 print(dates)
 
-fig=plt.figure()
+fig = plt.figure()
 
 
 plt.title("Daily High Temperatures, July 2018", fontsize=16)

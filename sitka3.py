@@ -33,13 +33,14 @@ print(dates)
 
 
 fig = plt.figure()
+
 plt.title("Daily High Temperatures, July 2018", fontsize=16)
 plt.xlabel("", fontsize=12)
 plt.ylabel("Temperature (F)", fontsize=12)
 plt.tick_params(axis='both', which='both', labelsize=12)
 fig.autofmt_xdate()  # auto format the dates axis which has dates
 
-plt.plot(dates, highs, c='red', alpha=0.5)
+plt.plot(dates, highs, c='red', alpha=0.5)  # alpha how transparent
 plt.plot(dates, lows, c='blue', alpha=0.5)
 
 plt.fill_between(dates, highs, lows, facecolor='blue', alpha=0.1)
